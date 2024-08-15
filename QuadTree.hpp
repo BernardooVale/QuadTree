@@ -2,10 +2,13 @@
 #define QUADTREE_HPP
 
 #include "Ponto.hpp"
+#include "Retangulo.hpp"
+#include "Heap.hpp"
+#include "Dist.hpp"
 
 #include <iostream>
 
-class QuadTree{
+class QuadTree {
 
 public:
 
@@ -13,17 +16,17 @@ public:
 	~QuadTree();
 
 	void adPonto(Ponto novo);
-	void nFolha();
 	void imprimir();
 	bool nRepetido(Ponto novo);
-
+	void procura(Heap* heap, Retangulo ret, Ponto posIni);
+	void ativa(Ponto busca);
+	void desativa(Ponto busca);
 
 private:
 
-	Ponto pontos[4];
+	Ponto ponto;
 	double x, y, larg, alt;
-	int tam;
-	bool Efolha;
+	bool Efolha, cheio;
 
 	// referenciando as famosas coordenadas politicas
 	QuadTree* esqSup; // superior esquerdo
@@ -33,8 +36,8 @@ private:
 
 	void Fractal();
 	void adPontoRec(Ponto novo);
+	bool contem(Retangulo retangulo);
 	Ponto* pesquisar(Ponto busca);
 };
 
 #endif
-
