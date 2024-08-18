@@ -86,7 +86,7 @@ void Ponto::ativa() {
 void Ponto::desativa() {
 
 	if (this->ativado == false) {
-		std::cout << "Ponto de recarga " << this->ident << " ja estava desativado." << std::endl;
+		std::cout << "Ponto de recarga " << this->ident << " já estava desativado." << std::endl;
 	}
 	else {
 		std::cout << "Ponto de recarga " << this->ident << " desativado." << std::endl;

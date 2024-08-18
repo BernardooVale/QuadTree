@@ -14,11 +14,11 @@ Retangulo::~Retangulo(){}
 
 void Retangulo::expande() {
 
-	this->x -= 1000;
-	this->y -= 1000;
-	this->xMax += 1000;
-	this->yMax += 1000;
-	this->raio += 1000;
+	this->x -= 850;
+	this->y -= 850;
+	this->xMax += 850;
+	this->yMax += 850;
+	this->raio += 850;
 }
 
 double Retangulo::getX()	{ return this->x; }
